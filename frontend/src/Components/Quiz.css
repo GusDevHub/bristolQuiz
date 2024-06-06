@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+body{
+  background-color: #003399;
+  background: url(../../bristol_bgimg.png) no-repeat center bottom #005a8c;
+  color: #e2e1ed;
+}
+
+.app {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  text-align: center;
+  padding: 20px;
+}
+.firstScreen-title{
+  color: #ffd700;
+}
+.firstScreen-instructions{
+  background-color: rgba(255, 255, 255, 0.25);
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 25px auto;
+  padding: 15px 5px;
+  width: 350px;
+}
+.userInput{
+  font-size: 1.45em;
+  max-width: 360px;
+  margin-bottom: 35px;
+  text-align: center;
+  width: 100%;
+}
+.userButton{
+  display: block;
+  margin: 0 auto;
+}
+.quiz-container {
+  display: block;
+  max-width: 600px;
+  margin: auto;
+  width: 90vw;
+}
+.timer{
+  display: inline-block;
+  border: solid 1px #C0C0C0;
+  border-radius: 5px;
+  padding: 3px 10px;
+  padding-right: 5px;
+  position: fixed;
+  top: 5px;
+  right: 5px;
+}
+.timer i {
+  margin-right: 5px;
+}
+.question-section {
+  margin-bottom: 0px;
+}
+.question-text{
+  color: #ffd700;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.28em;
+}
+.question-restart-button{
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 10px;
+  opacity: .65;
+}
+.question-restart-button:hover{
+  border-color: transparent;
+  opacity: 1;
+}
+.options-section{
+  margin: 25px auto 0 auto;
+  max-width: 300px;
+}
+.options-section button {
+  background-color: #e2e1ed;
+  display: block;
+  margin: 20px auto;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+}
+.options-section button:hover {
+  background-color: #219a0f;
+  border-color: transparent;
+  color: #f5f5f9;
+}
+.remaining-questions{
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.remaining-questions span {
+  background-color: #219a0f;
+  border-radius: 5px;
+  color: #f5f5f9;
+  font-weight: bold;
+  padding: 5px;
+}
+.score-section {
+  font-size: 24px;
+  font-weight: normal;
+}
+.passed-score{
+  color:#f5f5f9;
+  background-color: #219a0f;
+  border-radius: 3px;
+  padding: 0 5px;
+}
+.failed-score{
+  color:#f5f5f9;
+  background-color: #d40000;
+  border-radius: 3px;
+  padding: 0 5px;
+}
+.passed{
+  background-color: #219a0f;
+  border: solid 3px rgba(255, 255, 255,0.25);
+  border-radius: 5px;
+  color: #f5f5f9;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  max-width: 200px;
+  padding: 5px;
+  position: relative;
+}
+.passed::before{
+  content: '✅';
+}
+.failed{
+  background-color: #d40000;
+  border: solid 3px rgba(255, 255, 255,0.25);
+  border-radius: 5px;
+  color: #f5f5f9;
+  display: block;
+  height: 100%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  max-width: 200px;
+  padding: 5px;
+  position: relative;
+  width: 100%;
+}
+.failed::before{
+  content: '❌';
+}
+.quizOutcome{
+  display: block;
+}
+.restartButton{
+  background-color: #003399;
+  color: #e2e1ed;
+  font-size: .65em;
+  margin: 15px 0;
+  padding: 10px;
+}
+.rankingTitle{
+  border: solid 1px #ccc;
+  border-bottom:none;
+  border-radius: 10px 10px 0 0;
+  font-size: 1.15em;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+.rankingPlayers{
+  border: solid 1px #e2e1ed;
+  border-radius: 0 0 10px 10px;
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.rankingPlayers li:nth-child(1), .rankingPlayers li:nth-child(1) > .playerPosition{
+  background-color: #FFD700;
+}
+.rankingPlayers li:nth-child(2), .rankingPlayers li:nth-child(2) > .playerPosition{
+  background-color: #C0C0C0;
+}
+.rankingPlayers li:nth-child(3), .rankingPlayers li:nth-child(3) > .playerPosition{
+  background-color: #CD7F32;
+}
+.player{
+  background-color: #e2e1ed;
+  border-radius: 50%;
+  display: inline-block;
+  height: 120px;
+  margin: 35px;
+  position: relative;
+  width: 120px;
+}
+.player span{
+  display: block;
+}
+.playerPosition{
+  background-color: #e2e1ed;
+  border-radius: 5px;
+  color: #332e2e;
+  font-size: .55em;
+  font-weight: bold;
+  left: 35%;
+  padding: 0 5px;
+  position: absolute;
+  top: -10px;
+}
+.playerName{
+  color: #332e2e;
+  font-size: .75em;
+  font-weight: bold;
+  padding-top: 15px;
+}
+.playerName i {
+  color: rgba(0, 0, 0, .45);
+  display: block;
+  font-size: 2em;
+}
+.rankingPlayers li:nth-child(1) > .playerTime,.rankingPlayers li:nth-child(2) > .playerTime,.rankingPlayers li:nth-child(3) > .playerTime{
+  background-color: #219a0f;
+  color: #e2e1ed;
+}
+.playerPoints{
+  background-color: #e2e1ed;
+  border-radius: 5px;
+  bottom: 20px;
+  color: #645d5d;
+  font-size: .65em;
+  font-weight: bold;
+  right: -10%;
+  padding: 0 5px;
+  position: absolute;
+}
+.playerTime{
+  background-color: #e2e1ed;
+  border-radius: 5px;
+  bottom: 20px;
+  color: #645d5d;
+  font-size: .65em;
+  font-weight: bold;
+  left: -10%;
+  padding: 0 5px;
+  position: absolute;
+}
+.playerDate{
+  background-color: #e2e1ed;
+  border-radius: 5px;
+  bottom: -2px;
+  color: #645d5d;
+  font-size: .52em;
+  font-weight: bold;
+  left: 12%;
+  padding: 0 5px;
+  position: absolute;
+}
