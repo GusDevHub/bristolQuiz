@@ -25,13 +25,13 @@ const Quiz = () => {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const questionResponse = await fetch('http://localhost:3002/questions')
+        const questionResponse = await fetch('https://bristolquiz.onrender.com/questions')
         const questionData = await questionResponse.json()
 
-        const optionsResponse = await fetch('http://localhost:3002/options')
+        const optionsResponse = await fetch('https://bristolquiz.onrender.com/options')
         const optionsData = await optionsResponse.json()
 
-        const answersResponse = await fetch('http://localhost:3002/answers')
+        const answersResponse = await fetch('https://bristolquiz.onrender.com/answers')
         const answersData = await answersResponse.json()
         
         //combine questions with their options and answers
@@ -94,7 +94,7 @@ const Quiz = () => {
   //save quiz results to the backend
   const saveResults = async (name, finalScore, timeSpent) => {
     try {
-      const response = await fetch('http://localhost:3002/updateResults', {
+      const response = await fetch('https://bristolquiz.onrender.com/updateResults', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -114,7 +114,7 @@ const Quiz = () => {
   //fetch top users from the backend
   const fetchTopUsers = async () => {
     try {
-      const response = await fetch('http://localhost:3002/topUsers')
+      const response = await fetch('https://bristolquiz.onrender.com/topUsers')
       const data = await response.json()
       setTopUsers(data)
     } catch (error) {
